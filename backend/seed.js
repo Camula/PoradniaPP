@@ -89,6 +89,7 @@ const seed = async () => {
         // Pacjenci
         const patientsData = [
             ...Array(25).fill({ status: 'aktywny', hasReferral: true, expiresSoon: false }),
+            ...Array(3).fill({ status: 'aktywny', hasReferral: true, expiresSoon: true, archived: false }),
             ...Array(4).fill({ status: 'nieaktywny', hasReferral: false, expiresSoon: false }),
             ...Array(6).fill({ status: 'aktywny', hasReferral: true, expiresSoon: true, archived: true })
         ];
