@@ -42,20 +42,17 @@ System wspomagający pracę poradni, umożliwiający zarządzanie pacjentami, do
 
 ## Instrukcja Uruchomienia (Docker)
 
-Projekt został w pełni skonteneryzowany. Wymagany jest zainstalowany **Docker Desktop**.
+Projekt został w pełni skonteneryzowany. Wymagany jest zainstalowany **Docker Desktop** i wolny port `8080`.
 
-### 1. Inicjalizacja środowiska
-Skopiuj plik `.env.example` do pliku `.env` w głównym folderze projektu (zawiera domyślne hasła i klucze JWT do testów).
-
-### 2. Uruchomienie całego stosu
+### 1. Uruchomienie całego stosu
 W głównym folderze projektu uruchom:
 
 ```bash
 docker compose up --build -d
 ```
 
-### 3. Inicjalizacja bazy danych (Seed)
-Po uruchomieniu kontenerów (baza zainicjalizuje się automatycznie), można zasilić ją danymi testowymi:
+### 2. Inicjalizacja bazy danych (Seed)
+Po uruchomieniu kontenerów, można zasilić ją danymi testowymi:
 
 ```bash
 docker compose exec backend npm run seed
@@ -69,3 +66,10 @@ Aplikacja będzie dostępna pod adresem: `http://localhost:8080`
 
 - **Administrator:** `admin@poradnia.pl` / `admin123`
 - **Terapeuta:** `jan.kowalski@poradnia.pl` / `password123`
+
+---
+
+## Lokalne uruchamianie (Opcjonalnie)
+Domyślne hasła i klucze zaszyte są na potrzeby testów w pliku `docker-compose.yml`. W celu uruchomienia projektu klasycznie (np. przez `npm start` poza Dockerem):
+1. Skopiuj plik `.env.example` do pliku `.env`.
+2. Uzupełnij w nim własne hasła i klucze.
