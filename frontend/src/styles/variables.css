@@ -1,0 +1,57 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e67e22;
+  --danger-color: #e74c3c;
+  --border-color: #e2e8f0;
+  
+  --bg-main: #f4f7f6;
+  --bg-card: #ffffff;
+  --header-bg: #f8fafc;
+  
+  --text-main: #2c3e50;
+  --text-muted: #7f8c8d;
+  
+  --white: #ffffff;
+  --text-color: var(--text-main);
+
+  --font-size-h1: 1.5rem;
+  --font-size-h2: 1.25rem;
+  
+  --input-padding: 8px 12px;
+  --section-margin: 24px;
+  
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-hover: 0 8px 12px rgba(0,0,0,0.15);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  --transition-fast: 0.2s ease;
+  
+  --sidebar-width: 260px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+button, .clickable, input, select, textarea {
+  transition: var(--transition-fast);
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+tr {
+  transition: var(--transition-fast);
+}
+
+tr:hover {
+  box-shadow: var(--shadow-hover);
+}

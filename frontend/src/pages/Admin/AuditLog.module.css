@@ -1,0 +1,174 @@
+.container {
+    padding: var(--section-margin);
+    background-color: var(--bg-main);
+    min-height: calc(100vh - 64px);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--section-margin);
+}
+
+.header h1 {
+    font-size: var(--font-size-h1);
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.searchWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 12px;
+    color: var(--text-muted);
+}
+
+.searchInput {
+    padding: 8px 12px 8px 40px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    min-width: 300px;
+    outline: none;
+}
+
+.searchInput:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.tableContainer {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    margin-bottom: var(--section-margin);
+    border: 1px solid var(--border-color);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    padding: 12px 16px;
+    text-align: left;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 14px;
+    color: var(--text-main);
+}
+
+.timestamp {
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+.actionCell {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* Color coding for action types (rows) */
+.add {
+    background-color: rgba(46, 204, 113, 0.05);
+}
+.add:hover {
+    background-color: rgba(46, 204, 113, 0.1);
+}
+.add .actionCell {
+    color: #166534;
+}
+
+.update {
+    background-color: rgba(230, 126, 34, 0.05);
+}
+.update:hover {
+    background-color: rgba(230, 126, 34, 0.1);
+}
+.update .actionCell {
+    color: #9a3412;
+}
+
+.delete {
+    background-color: rgba(231, 76, 60, 0.05);
+}
+.delete:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+}
+.delete .actionCell {
+    color: #991b1b;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.paginationControls {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.pageNumber {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.pageBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text-main);
+}
+
+.pageBtn:hover:not(:disabled) {
+    background: var(--header-bg);
+    border-color: var(--primary-color);
+}
+
+.pageBtn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pageInfo {
+    font-size: 14px;
+    color: var(--text-muted);
+}

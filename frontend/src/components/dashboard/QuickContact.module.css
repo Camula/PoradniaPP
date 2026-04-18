@@ -1,0 +1,90 @@
+.container {
+  padding: 24px;
+  background: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--text-main);
+}
+
+.searchBox {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.searchInput {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px 8px 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.signature {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.empty {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 16px;
+}

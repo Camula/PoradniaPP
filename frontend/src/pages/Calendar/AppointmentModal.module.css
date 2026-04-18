@@ -1,0 +1,154 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: var(--section-margin);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: var(--shadow-md);
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--section-margin);
+}
+
+.header h2 {
+  margin: 0;
+  font-size: var(--font-size-h2);
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+.formGroup select,
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: var(--input-padding);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.formGroup input[disabled] {
+  background-color: var(--bg-main);
+  color: var(--text-muted);
+}
+
+.timeSelects {
+  display: flex;
+  gap: 8px;
+}
+
+.timeSelects select {
+  flex: 1;
+}
+
+.error {
+  color: var(--danger-color);
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.cancelButton,
+.submitButton,
+.copyButton,
+.deleteButton {
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+}
+
+.cancelButton {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.submitButton {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.submitButton:hover {
+  opacity: 0.9;
+}
+
+.summaryItem {
+  margin-bottom: 12px;
+}
+
+.summaryItem label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.summaryItem p {
+  margin: 0;
+  color: var(--text-main);
+  font-size: 1rem;
+}
+
+.copyButton {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.deleteButton {
+  background-color: var(--danger-color);
+  color: white;
+}

@@ -1,0 +1,197 @@
+.container {
+  padding: var(--section-margin);
+  background-color: var(--bg-main);
+  min-height: calc(100vh - 64px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--section-margin);
+}
+
+.header h1 {
+  font-size: var(--font-size-h1);
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.titleWithFilter {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.filterToggle {
+  display: flex;
+  background-color: #f3f4f6;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  gap: 0.25rem;
+}
+
+.filterButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.activeFilter {
+  background-color: white;
+  color: #111827;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.searchWrapper {
+  position: relative;
+}
+
+.searchInput {
+  padding: 8px 12px 8px 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  width: 300px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.addButton {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.addButton:hover {
+  opacity: 0.9;
+}
+
+.tableWrapper {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  background-color: var(--header-bg);
+  padding: 12px 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sortableHeader {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.sortableHeader:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.sortIcon {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  display: inline-flex;
+}
+
+.table td {
+  padding: 12px 16px;
+  font-size: 0.875rem;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.clickableRow {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.clickableRow:hover {
+  background-color: var(--header-bg);
+}
+
+.notAssigned {
+  opacity: 0.6;
+}
+
+.statusTag {
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.statusActive {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.statusInactive {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.statusArchived {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.emptyState {
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-muted);
+}

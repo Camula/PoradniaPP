@@ -1,0 +1,95 @@
+.calendarContainer {
+  padding: var(--spacing-lg);
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+}
+
+.filterBar {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterGroup label {
+  font-weight: 500;
+  color: var(--text-main);
+  margin-right: 4px;
+}
+
+.filterGroup select, .searchInput {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.9rem;
+  background-color: white;
+}
+
+.filterGroup select:focus, .searchInput:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.searchInput {
+  width: 150px;
+}
+
+.calendarWrapper {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
+
+.calendarWrapper :global(.fc) {
+  font-family: inherit;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md);
+}
+
+.calendarWrapper :global(.fc-toolbar-title) {
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+
+.calendarWrapper :global(.fc-button-primary) {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.calendarWrapper :global(.fc-button-primary:not(:disabled):active),
+.calendarWrapper :global(.fc-button-primary:not(:disabled).fc-button-active) {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.calendarWrapper :global(.fc-event) {
+  cursor: pointer;
+  border: none;
+  padding: 2px 4px;
+}
+
+.calendarWrapper :global(.fc-event-title),
+.calendarWrapper :global(.fc-event-time) {
+  color: #1a1a1a !important;
+  font-weight: 600;
+}
+
+.calendarWrapper :global(.fc-daygrid-event) {
+  font-size: 0.75rem;
+  padding: 1px 2px;
+  margin-top: 1px;
+}
