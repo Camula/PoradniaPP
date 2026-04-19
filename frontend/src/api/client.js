@@ -24,7 +24,7 @@ apiClient.interceptors.response.use(
         }
 
         // Obsługa braku autoryzacji
-        if (error.response && [401, 403].includes(error.response.status)) {
+        if (error.response && error.response.status === 401) {
             localStorage.removeItem('token');
             localStorage.removeItem('user');
             window.location.href = '/login';
